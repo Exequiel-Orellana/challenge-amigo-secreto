@@ -39,3 +39,10 @@ function mostrarListaAmigos() {
         listaElement.appendChild(li);
     });
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const boton = document.querySelector('.button-add');
+    boton.removeEventListener('click', agregarAmigo); 
+    boton.addEventListener('click', agregarAmigo);
+});
