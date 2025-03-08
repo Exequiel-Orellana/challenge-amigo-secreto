@@ -1,1 +1,1 @@
-let amigos = [];
+let amigos = []; 
