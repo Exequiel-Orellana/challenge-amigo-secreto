@@ -46,3 +46,15 @@ document.addEventListener('DOMContentLoaded', function () {
     boton.removeEventListener('click', agregarAmigo); 
     boton.addEventListener('click', agregarAmigo);
 });
+
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert("No hay amigos en la lista para sortear.");
+        return;
+    }
+
+    const indiceAleatorio = Math.floor(Math.random() * amigos.length);
+    const amigoSorteado = amigos[indiceAleatorio];
+
+    mostrarResultado(amigoSorteado);
+}
