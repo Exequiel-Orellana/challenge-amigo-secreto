@@ -58,3 +58,12 @@ function sortearAmigo() {
 
     mostrarResultado(amigoSorteado);
 }
+
+function mostrarResultado(amigo) {
+    const resultadoElement = document.getElementById('resultado');
+    resultadoElement.innerHTML = ""; 
+
+    const li = document.createElement('li');
+    li.textContent = `🎉 ¡El amigo sorteado es: ${amigo}! 🎉`;
+    resultadoElement.appendChild(li);
+}
