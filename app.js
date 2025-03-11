@@ -67,3 +67,9 @@ function mostrarResultado(amigo) {
     li.textContent = `🎉 ¡El amigo sorteado es: ${amigo}! 🎉`;
     resultadoElement.appendChild(li);
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const botonSortear = document.querySelector('.button-draw');
+    botonSortear.removeEventListener('click', sortearAmigo); // Evita duplicados
+    botonSortear.addEventListener('click', sortearAmigo);
+});
